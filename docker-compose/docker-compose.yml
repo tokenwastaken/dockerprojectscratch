@@ -1,0 +1,25 @@
+version: '3'
+services:
+   web:    #web yerine hersey gelebilir 
+      container_name: nginx # --name yerine
+      ports: # -p yerine
+        - "8080:80"
+      image: nginx:alpine
+      networks:
+         - net
+   database:    
+      container_name: mysql 
+      ports: 
+        - "3306:3306"
+      image: mysql:5.7  
+      volumes:
+      - "mysql_volume:/var/lib/mysql"
+      environment:
+        - MYSQL_ROOT_PASSWORD=1
+        - SHOW=true
+      networks:
+         - net
+volumes:
+    mysql_volume:
+networks: 
+   net: 
