@@ -51,8 +51,9 @@ os images are root by default dont have sudo installed
 
 #dockerfile adi farkli oldugunda
 
-```docker build -t nginx-custom:v1 -f Dockerfile2 . `
-``` #.dockerignore dockerfile den onceki dizinde olmali boylece build ederken sonda . koyarsak context olarak diger dizinleri de almaz icine de kullanmasini istemedigimiz dizinleri alt alta yaziyoruz.
+```docker build -t nginx-custom:v1 -f Dockerfile2 . ```
+
+#.dockerignore dockerfile den onceki dizinde olmali boylece build ederken sonda . koyarsak context olarak diger dizinleri de almaz icine de kullanmasini istemedigimiz dizinleri alt alta yaziyoruz.
 
 #docker imagelari read only olduklari icin ayni tag ile build edersek yeni image calistirir eski isimdeki none olarak degisir buna dangling image denir. versiyonlama bunun onune gecer
 
